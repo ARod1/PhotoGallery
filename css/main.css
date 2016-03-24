@@ -1,0 +1,188 @@
+/* Basic Styles */
+
+* { 
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+fieldset { 
+    border: none;
+}
+
+body {
+    font-family: sans-serif;
+	   background: #fff;
+    color: #fff;
+}
+
+a {
+	   text-decoration: none;
+}
+
+img {
+    width: 100%;  
+    box-shadow: 1px 4px 10px 1px rgba(0, 0, 0, 0.7);
+}
+
+.thumb {
+    width: 70%;
+    margin: 3em auto;
+}
+
+.nav {
+    background: #fff;
+    width: 100%;
+    position: fixed;
+}
+
+.wrapper {
+    padding-top: 120px;   
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* LightBox */
+
+#overlay {
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: none;
+    text-align: center;
+}
+
+#overlay .frame {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto 0;
+    position: relative;
+}
+
+#overlay img {
+    width: 100%;        
+}
+
+#overlay p {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 2%;
+}
+
+#overlay span {
+    border-radius: 5%;
+    background: rgba( 255, 255, 255, .3);
+    font-size: 40px;
+    padding: 5px;
+    position: absolute;
+    top: 40%;
+    color: #000;    
+}
+
+#overlay span.back {
+    left: 0;   
+}
+
+#overlay span.forward {
+    right: 0;
+}
+
+
+/* Search Bar */
+
+#search-form {
+     margin: 2em 0;
+     text-align: center;
+}
+
+#search {
+     background: #fff;
+     border: 3px solid #ccc;
+     color: #000;;
+     height: 50px;
+     font-size: 16px;
+     width: 360px;
+     padding: 5px;
+     border-radius: 5px; 
+	    text-shadow: rgba(0,0,0,.2) 0 0 5px;
+}
+
+
+@media (min-width:400px) {
+
+.thumb {
+    width: 40%;
+    float: left;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#search {
+    width: 360px;   
+}
+
+}
+
+
+@media (min-width:700px) {
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.thumb {
+    width: 30%;
+    float: left;
+    margin: 2em 0;
+}
+
+.wrapper div:nth-child(3n+2) { 
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+
+#search {
+    width: 480px;   
+}
+
+}
+
+
+@media (min-width: 1100px) {
+
+.wrapper {
+    width: 980px;
+    height: 908px;
+    margin: 0 auto;
+
+}
+
+.wrapper div:nth-child(3n+2) { 
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.wrapper div:nth-child(4n+1),
+.wrapper div:nth-child(4n+2),
+.wrapper div:nth-child(4n+3) { 
+    margin-right: 60px;
+}
+
+.thumb {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 0 0 3em;
+}
+
+
+}
+
