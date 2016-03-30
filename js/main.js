@@ -3,7 +3,7 @@ var $frame = $('<div class="frame"></div>');
 var $image = $("<img>");
 var $captionTitle = $("<h1></h1>");
 var $caption = $("<p></p>");
-var $foward = $('<span class="forward"></span>').text(">");
+var $forward = $('<span class="forward"></span>').text(">");
 var $back = $('<span class="back"></span>').text("<");
 var gallery = [];
 var titles = [];
@@ -19,7 +19,7 @@ $frame.append($image);
 $frame.append($captionTitle);
 $frame.append($caption);
 $frame.append($back);
-$frame.append($foward);
+$frame.append($forward);
 
 $overlay.append($frame);
 
@@ -56,7 +56,7 @@ $overlay.click(function(){
 });
 
 $("#search").on("keyup", function(){
-    var search = $("#search").val();
+    var search = $("#search").val().toLowerCase();
     
     $("div img").each(function(){
     var altValue = $(this).attr("alt")
@@ -69,7 +69,7 @@ $("#search").on("keyup", function(){
     
 });
 
-$foward.click(function(event){
+$forward.click(function(event){
     event.stopPropagation();
     if( index !== -1 && index !== gallery.length - 1) {
         index+=1;
